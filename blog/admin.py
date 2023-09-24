@@ -3,9 +3,10 @@ from .models import Post
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('date_created', 'author')
+    list_display = ('title', 'date_created', 'author')
+
+
+
 
 # Register your models here.
-admin.site.register(Post, PostAdmin(
-    
-))
+admin.site.register(Post, PostAdmin)
